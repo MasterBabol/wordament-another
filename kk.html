@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta name="viewport" content="width=320, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="ww.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="papaparse.min.js"></script>
+<script>
+
+var timeLimit = 60;
+var score;
+var wordArray = [];
+var prevRandomList = [];
+var wrongWordList = [];
+var wasWrong = false;
+
+$(function () {
+	$.get('800F.csv', function (data) {
+		wordArray = Papa.parse(data).data;
+	});
+	
+	$('#btStartCover').click(function () {
+		gameStart();
+	});
+});
+function showFinalScore(score, avg, best)
+{
+	var wrongAnswerLinkString = '';
+	if (wrongWordList.length > 0)
+		wrongAnswerLinkString = '<br /><a id="lbWrongAnswersLink" href=www.html?wrong=' + wrongWordList.join() + '>Wrong Answers</a>';
+	$('#lbScore').html('Last Score: ' + score + ' / Net Avg: ' + avg + ' / Net Best: ' + best + '' + wrongAnswerLinkString);
+}
+function showScoreInGame(score)
+{
+	$('#lbCurrentScore').text('Current Point: ' + score);
+}
+function showTimeInGame(time)
+{
+	$('#lbTime').text('0:' + padding(timeLimit - time, 2));
+}
+context = {};
+function elapseTime()
+{
+	if (context.endTime == context.curTime)
+	{
+		gameEnd(score);
+	}
+	else
+	{
+		context.curTime += 1;
+		showTimeInGame(context.curTime);
+		setTimeout(elapseTime, 1000);
+	}
+}
+function gameStart()
+{
+	$('#ctStartCover').addClass('hidden-layer');
+	score = 0;
+	showScoreInGame(score);
+	showTimeInGame(0);
+	wrongWordList = [];
+	randomInit();
+	context = {curTime: 0, endTime: timeLimit};
+	selectNext();
+	setTimeout(elapseTime, 1000);
+}
+function gameEnd(score)
+{
+	$('#ctStartCover').removeClass('hidden-layer');
+	$.get('kscore.php?score=' + score, function (data) {
+		scoreboard = JSON.parse(data);
+		var avgscore = (scoreboard.totalgames == 0)?0:(scoreboard.totalsum / scoreboard.totalgames);
+		var bestscore = scoreboard.best;
+		showFinalScore(score, avgscore, bestscore);
+	});
+}
+function padding(n, width)
+{
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+}
+function getRandomInt(min, max)
+{
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+function getRandomInts(num, min, max)
+{
+	var ints = [];
+	while (ints.length < num)
+	{
+		var randNum = getRandomInt(min, max);
+		if(!(ints.indexOf(randNum) > -1) && !(prevRandomList.indexOf(randNum) > -1))
+			ints.push(randNum);
+	}
+	prevRandomList = prevRandomList.concat(ints);
+	return ints;
+}
+function selectRandomMeaning(wordMeaning)
+{
+	var meanings = wordMeaning.split(';');
+	var n = meanings.length;
+	return meanings[getRandomInt(0, n)];
+}
+function rawWordDataToWordPair(no)
+{
+	var selected = wordArray[no];
+	return { word: selected[1], meaning: selected[0], original: selected, originalNo: no };
+}
+function randomInit()
+{
+	prevRandomList = [];
+}
+function selectNext()
+{
+	var WORDS_NUM = 6;
+	var n = wordArray.length;
+	var selectedWordsIndex = getRandomInts(WORDS_NUM, 0, n);
+	var words = [];
+	
+	wasWrong = false;
+	
+	for (i = 0; i < WORDS_NUM; i++)
+	{
+		var wordPair = rawWordDataToWordPair(selectedWordsIndex[i]);
+		words.push(wordPair);
+	}
+		
+	var correctWordIndex = getRandomInt(0, WORDS_NUM);
+	
+	for (i = 0; i < WORDS_NUM; i++)
+	{
+		$('#meaning' + i).removeClass('wrong');
+		$('#meaning' + i).removeClass('correct');
+		var meaning = words[i].meaning;
+		$('#lbMeaning' + i).text(meaning);
+		$('#btMeaning' + i).unbind('click');
+		if (i == correctWordIndex)
+			$('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo}, function (event) {
+				var target = event.data.target;
+				var originalNo = event.data.originalNo;
+				$('#meaning' + target).addClass('correct');
+				if (wasWrong)
+				{
+					wasWrong = false;
+					wrongWordList.push(originalNo);
+				}
+				setTimeout(function () {
+					score += 1;
+					showScoreInGame(score);
+					selectNext();
+				}, 100);
+				$('#btMeaning' + target).unbind('click');
+			});
+		else
+            $('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo}, function (event) {
+				var target = event.data.target;
+				var originalNo = event.data.originalNo;
+				wasWrong = true;
+				$('#meaning' + target).addClass('wrong');
+				score -= 2;
+				showScoreInGame(score);
+				$('#btMeaning' + target).unbind('click');
+			});
+	}
+	
+	$('#lbWord').text(selectRandomMeaning(words[correctWordIndex].word));
+}
+</script>
+</head>
+<body>
+<div id="container">
+<div id="ctStartCover"><span id="btStartCover"></span><div id="lbScore">&nbsp;</div><div id="lbTouchToStart">Touch to Start</div></div>
+<div id="ctBoard"><span id="lbCurrentScore">Current Point: 0</span><span id="lbTime">0:60</span></div>
+<div id="ctWord"><div id="lbWord"></div></div>
+<div id="ctMeanings">
+<div id="meaning0" class="meaning oddcolor"><span id="btMeaning0" class="btMeaning"></span><a id="lbMeaning0"></a></div>
+<div id="meaning1" class="meaning evencolor"><span id="btMeaning1" class="btMeaning"></span><a id="lbMeaning1"></a></div>
+<div id="meaning2" class="meaning oddcolor"><span id="btMeaning2" class="btMeaning"></span><a id="lbMeaning2"></a></div>
+<div id="meaning3" class="meaning evencolor"><span id="btMeaning3" class="btMeaning"></span><a id="lbMeaning3"></a></div>
+<div id="meaning4" class="meaning oddcolor"><span id="btMeaning4" class="btMeaning"></span><a id="lbMeaning4"></a></div>
+<div id="meaning5" class="meaning evencolor"><span id="btMeaning5" class="btMeaning"></span><a id="lbMeaning5"></a></div>
+</div>
+</body>
+</html>

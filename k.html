@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta name="viewport" content="width=320, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="w.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var wordArray = [];
+$(function () {
+	$.get('800F.csv', function (data) {
+		wordArray = data.split(/\r?\n/);
+		wordArray.pop(); // remove last empty line
+		selectNext();
+	});
+	$('#btNextWord').click(function () {
+		selectNext();
+	});
+});
+function getRandomInt(min, max)
+{
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+function getRandomInts(num, min, max)
+{
+	var ints = [];
+	while (ints.length < num)
+	{
+		var randNum = getRandomInt(min, max);
+		if(!(ints.indexOf(randNum) > -1))
+			ints.push(randNum);
+	}
+	return ints;
+}
+function selectRandomMeaning(wordMeaning)
+{
+	var meanings = wordMeaning.split(';');
+	var n = meanings.length;
+	return meanings[getRandomInt(0, n)];
+}
+function rawWordDataToWordPair(str)
+{
+	var seppos = str.indexOf(',');
+	var word = str.substring(0, seppos);
+	var meaning = str.substring(seppos + 1);
+	meaning = meaning.replace(/\"/gi, '');
+	return { word: meaning, meaning: word, original: str };
+}
+function selectNext()
+{
+	var WORDS_NUM = 6;
+	var n = wordArray.length;
+	var selectedWordsIndex = getRandomInts(WORDS_NUM, 0, n);
+	var words = [];
+	
+	for (i = 0; i < WORDS_NUM; i++)
+	{
+		var wordPair = rawWordDataToWordPair(wordArray[selectedWordsIndex[i]]);
+		words.push(wordPair);
+	}
+		
+	var correctWordIndex = getRandomInt(0, WORDS_NUM);
+	
+	for (i = 0; i < WORDS_NUM; i++)
+	{
+		var meaning = words[i].meaning;
+		$('#lbMeaning' + i).text(meaning);
+		$('#btMeaning' + i).unbind('click');
+		if (i == correctWordIndex)
+			$('#btMeaning' + i).click(function () { selectNext(); });
+		else
+			$('#btMeaning' + i).click(function () {  });
+	}
+	
+	$('#lbWord').text(selectRandomMeaning(words[correctWordIndex].word));
+}
+</script>
+</head>
+<body>
+<div id="container">
+<div id="ctWord"><div id="lbWord"></div></div>
+<div id="ctNextWord"><span id="btNextWord"></span><div id="lbNextWord">next</div></div>
+<div id="ctMeanings">
+<div id="meaning0" class="meaning oddcolor"><span id="btMeaning0" class="btMeaning"></span><a id="lbMeaning0"></a></div>
+<div id="meaning1" class="meaning evencolor"><span id="btMeaning1" class="btMeaning"></span><a id="lbMeaning1"></a></div>
+<div id="meaning2" class="meaning oddcolor"><span id="btMeaning2" class="btMeaning"></span><a id="lbMeaning2"></a></div>
+<div id="meaning3" class="meaning evencolor"><span id="btMeaning3" class="btMeaning"></span><a id="lbMeaning3"></a></div>
+<div id="meaning4" class="meaning oddcolor"><span id="btMeaning4" class="btMeaning"></span><a id="lbMeaning4"></a></div>
+<div id="meaning5" class="meaning evencolor"><span id="btMeaning5" class="btMeaning"></span><a id="lbMeaning5"></a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta name="viewport" content="width=320, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="www.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="papaparse.min.js"></script>
+<script>
+var wrongWordsArray = [<?php echo $_GET['wrong'] ?>];
+var wordArray = [];
+
+$(function () {
+	$.get('800F.csv', function (data) {
+		wordArray = Papa.parse(data).data;
+		var outputString = '';
+		
+		for (i = 0; i < wrongWordsArray.length; i++)
+		{
+			var sel = wrongWordsArray[i];
+			outputString += '<div class="divTableRow">';
+			outputString += '<div class="divTableCell">' + wordArray[sel][0] + '</div>';
+			outputString += '<div class="divTableCell">' + wordArray[sel][1] + '</div>';
+			outputString += '</div>';
+		}
+		$('#tbWordsList').html(outputString);
+	});
+});
+</script>
+</head>
+<body>
+<div class="divTable">
+<div id="tbWordsList" class="divTableBody">
+</div>
+</div>
+</body>
+</html>
