@@ -25,6 +25,7 @@ $(function () {
 function showFinalScore(score, avg, best)
 {
 	var wrongAnswerLinkString = '';
+    avg = avg.toFixed(2);
 	if (wrongWordList.length > 0)
 		wrongAnswerLinkString = '<br /><a id="lbWrongAnswersLink" href=www.html?wrong=' + wrongWordList.join() + '>Wrong Answers</a>';
 	$('#lbScore').html('Last Score: ' + score + ' / Net Avg: ' + avg + ' / Net Best: ' + best + '' + wrongAnswerLinkString);
