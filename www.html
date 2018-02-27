@@ -7,9 +7,10 @@
 <script>
 var wrongWordsArray = [<?php echo $_GET['wrong'] ?>];
 var wordArray = [];
+var target = '<?php $t = $_GET['t']; if (!empty($t)) echo $t; else echo '800F';  ?>';
 
 $(function () {
-	$.get('800F.csv', function (data) {
+	$.get(target + '.csv', function (data) {
 		wordArray = Papa.parse(data).data;
 		var outputString = '';
 		

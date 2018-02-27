@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta name="viewport" content="width=320, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="www.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="papaparse.min.js"></script>
+<script>
+var wordArray = [];
+var presch = '<?php echo $_GET["s"]; ?>';
+
+$(function () {
+	$.get('800F.csv', function (data) {
+		wordArray = Papa.parse(data).data;
+        shuffle(wordArray);
+        printWords(presch);
+        $('#tbSearch').val(presch);
+    });
+
+    $('#tbSearch').keyup(function () {
+        var patstr = $('#tbSearch').val();
+        printWords(patstr);
+    });
+
+    $('#btClear').click(function () {
+        $('#tbSearch').val('');
+        printWords('');
+    });
+});
+
+function shuffle(a)
+{
+    for (let i = a.length - 1; i > 0; i--) 
+    {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function printWords(patstr)
+{
+	var outputString = '';
+    var match = new RegExp(patstr, 'i');
+		
+	for (i = 0; i < wordArray.length; i++)
+	{
+		var sel = i;
+        if (match.test(wordArray[sel][0]) || match.test(wordArray[sel][1]))
+        {
+		    outputString += '<div class="divTableRow">';
+		    outputString += '<div class="divTableCell">' + wordArray[sel][0] + '</div>';
+		    outputString += '<div class="divTableCell">' + wordArray[sel][1] + '</div>';
+		    outputString += '</div>';
+        }
+	}
+	$('#tbWordsList').html(outputString);
+}
+
+</script>
+</head>
+<body>
+<form>
+    <input type="text" id="tbSearch" style="width: 270px;" />
+    <input type="button" id="btClear" value="CLR" style="width: 40px;" />
+</form>
+<div class="divTable">
+<div id="tbWordsList" class="divTableBody">
+</div>
+</div>
+</body>
+</html>

@@ -1,20 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=320, initial-scale=1">
+<title>Wordament-another (E->K)</title>
 <link rel="stylesheet" type="text/css" href="ww.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="papaparse.min.js"></script>
 <script>
 
-var timeLimit = 60;
+var siteWidth = 320;
+var timeLimit = 120;
 var score;
 var wordArray = [];
 var prevRandomList = [];
 var wrongWordList = [];
 var wasWrong = false;
+var target = '<?php $t = $_GET['t']; if (!empty($t)) echo $t; else echo '800F';  ?>';
 
 $(function () {
-	$.get('800F.csv', function (data) {
+    var scale = screen.width / siteWidth;
+    $('head').append('<meta name="viewport" content="width=' + siteWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale + ',user-scalable=no"/>');
+
+	$.get(target + '.csv', function (data) {
 		wordArray = Papa.parse(data).data;
 	});
 	
@@ -27,7 +33,7 @@ function showFinalScore(score, avg, best)
 	var wrongAnswerLinkString = '';
     avg = avg.toFixed(2);
 	if (wrongWordList.length > 0)
-		wrongAnswerLinkString = '<br /><a id="lbWrongAnswersLink" href=www.html?wrong=' + wrongWordList.join() + '>Wrong Answers</a>';
+		wrongAnswerLinkString = '<br /><a id="lbWrongAnswersLink" href=www.html?t=' + target  + '&wrong=' + wrongWordList.join() + '>Wrong Answers</a>';
 	$('#lbScore').html('Last Score: ' + score + ' / Net Avg: ' + avg + ' / Net Best: ' + best + '' + wrongAnswerLinkString);
 }
 function showScoreInGame(score)
@@ -36,7 +42,10 @@ function showScoreInGame(score)
 }
 function showTimeInGame(time)
 {
-	$('#lbTime').text('0:' + padding(timeLimit - time, 2));
+    var timeleft = timeLimit - time;
+    var min = Math.floor(timeleft / 60);
+    var sec = timeleft % 60;
+	$('#lbTime').text(min + ':' + padding(sec, 2));
 }
 context = {};
 function elapseTime()
@@ -67,7 +76,7 @@ function gameStart()
 function gameEnd(score)
 {
 	$('#ctStartCover').removeClass('hidden-layer');
-	$.get('wscore.php?score=' + score, function (data) {
+	$.get('wscore.php?score=' + score + '&t=' + target, function (data) {
 		scoreboard = JSON.parse(data);
 		var avgscore = (scoreboard.totalgames == 0)?0:(scoreboard.totalsum / scoreboard.totalgames);
 		var bestscore = scoreboard.best;
@@ -135,15 +144,11 @@ function selectNext()
 		$('#lbMeaning' + i).text(meaning);
 		$('#btMeaning' + i).unbind('click');
 		if (i == correctWordIndex)
-			$('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo}, function (event) {
+                $('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo, correctNo: words[correctWordIndex].originalNo}, function (event) {
 				var target = event.data.target;
 				var originalNo = event.data.originalNo;
 				$('#meaning' + target).addClass('correct');
-				if (wasWrong)
-				{
-					wasWrong = false;
-					wrongWordList.push(originalNo);
-				}
+				wasWrong = false;
 				setTimeout(function () {
 					score += 1;
 					showScoreInGame(score);
@@ -152,10 +157,15 @@ function selectNext()
 				$('#btMeaning' + target).unbind('click');
 			});
 		else
-            $('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo}, function (event) {
+            $('#btMeaning' + i).click({target: i, originalNo: words[i].originalNo, correctNo: words[correctWordIndex].originalNo}, function (event) {
 				var target = event.data.target;
 				var originalNo = event.data.originalNo;
-				wasWrong = true;
+                var correctNo = event.data.correctNo;
+                if (!wasWrong)
+                {
+				    wasWrong = true;
+					wrongWordList.push(correctNo);
+                }
 				$('#meaning' + target).addClass('wrong');
 				score -= 2;
 				showScoreInGame(score);
@@ -179,6 +189,7 @@ function selectNext()
 <div id="meaning3" class="meaning evencolor"><span id="btMeaning3" class="btMeaning"></span><a id="lbMeaning3"></a></div>
 <div id="meaning4" class="meaning oddcolor"><span id="btMeaning4" class="btMeaning"></span><a id="lbMeaning4"></a></div>
 <div id="meaning5" class="meaning evencolor"><span id="btMeaning5" class="btMeaning"></span><a id="lbMeaning5"></a></div>
+</div>
 </div>
 </body>
 </html>

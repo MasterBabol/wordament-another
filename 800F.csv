@@ -90,8 +90,8 @@ anthology,작품집
 articulation,또렷한 발음;명료한 표현
 brevity,간결함
 chronicle,연대순으로 기록하다
-cohesive,일관성 있는
-cohesiveness,일관성 있는
+cohesive,일관성있는
+cohesiveness,일관성
 colloquial,구어체의
 conjunction,접속사
 contraction,생략;축약
@@ -112,7 +112,7 @@ metaphor,은유
 naive,순진한;천진난만한
 naivety,천진난만
 nonverbal,비언어적인
-paperback,종이 표재의 책;문고판
+paperback,종이 표지의 책;문고판
 preface,서문;머리말
 protagonist,주인공
 readable,읽기 쉬운;재미있는
@@ -445,7 +445,7 @@ enthrone,왕위에 앉히다
 feudalism,봉건제도
 forerunner,선구자
 heir to the throne,왕위 계승자
-in restrospect,되돌아보면;회고해보면
+in retrospect,되돌아보면;회고해보면
 inscribe,새기다
 lineage,혈통;자손
 mercenary,용병
@@ -460,7 +460,7 @@ pave the way,터를 닦다
 reap,수확하다;보답받다
 regime,정권;체제
 retaliate,보복하다
-rebolt,반란
+revolt,반란
 seize,붙잡다;빼앗다
 siege,포위;공성
 splendor,화려함
@@ -539,7 +539,7 @@ testify,증언하다
 testimony,증언
 turn oneself in,자수하다
 under the guise of,~을 가장하여;~을 구실로
-abstrain from,~을 삼가다;~을 끊다
+abstain from,~을 삼가다;~을 끊다
 Achilles' heel,아킬레스건
 adversary,적수;상대
 anniversary,기념일
@@ -592,3 +592,640 @@ venue,현장;개최지
 yawn,하품하다
 you bet,물론이지
 zealously,열광적으로
+afterlife,내세
+biblical,성경의;성경에 나온
+cardinal,추기경;아주 중요한
+clarification,설명;해명
+clarify,명백히 하다
+cling to,~을 고수하다
+coexistent,공존하는
+creationism,천지창조설
+cult,신흥종교;숭배
+deify,신격화하다
+deity,신
+disciple,제자;신도
+doctrine,교의;교리
+dogmatic,독단적인;교리상의
+dualistic,이원의;이중의
+enshrine,신전에 모시다
+godliness,독실함;신앙심 깊음
+guru,(종교적) 스승;지도자
+humanitarian,인도주의적인;박애의
+icon,우상
+ideological,관념적인
+integrity,성실;청렴;온전함
+moral sense,도덕 관념
+on the basis of,~에 근거하여
+ordain,~에게 성직을 주다
+ordination,성직 안수
+pagan,이교도의;이교도
+paradigm,사고 체계
+persecution,박해;학대
+prophecy,예언
+prophesy,예언하다
+sermon,설교
+Taoism,도교
+theologian,신학자
+transcend,초월하다;능가하다
+worldly,속세의;세속적인
+add up,말이 되다;앞뒤가 맞다
+baseless,근거없는;사실무근의
+be dead set against,~에 단호히 반대하다
+biweekly,격주의
+by word of mouth,구두로;말로
+come to light,밝혀지다;드러나다
+concise,간결한
+crack a joke,농담하다
+demystify,해명하다
+dub,~이라고 부르다
+dubious,의심스러운;모호한
+editorial,"(신문, 잡지의) 사설"
+entice,꾀다;유혹하다
+explicit,명백한;뚜렷한
+giggle,낄낄 웃다
+have nothing to do with,~과 아무런 관계가 없다
+hilarious,유쾌한;즐거운
+humiliating,굴욕적인
+hypocrisy,위선
+hypocritical,위선적인
+in-depth,면밀한;상세한
+inglorious,불명예스러운;수치스러운
+keep one's ear to the ground,여론에 귀를 기울이다
+memorandum,비망록;기록
+mournful,애처로운;슬픔에 잠긴
+not always the case,항상 ~한 것은 아닌
+outspoken,솔직한;거리낌없이 말하는
+overrate,과대평가하다
+pay tribute to,~에게 찬사를 표하다
+periodical,잡지;간행물
+predominant,두드러진;우세한
+predominantly,주로
+preeminence,탁월;검출
+preeminent,탁월한
+premiere,시사회
+reportedly,보도에 따르면
+screen,상영하다;가려내다;심사하다
+screenwriter,영화 각본 작가
+seemingly,겉으로는;겉으로 보기에
+sentiment,감정;정서;감상
+sentimental,감상적인
+soap opera,연속극
+star,주연을 시키다
+take by surprise,놀라게하다
+undeserved,부당한;과분한
+villain,악역(빌런)
+would-be,지망의;장래의
+a far cry from,~와 전혀 다른 것
+a fly in the ointment,옥에 티
+acoustics,음향효과
+apprentice,도제;견습생
+apprenticeship,도제기간;수습제도
+auditorium,강당;청중석
+avant-garde,전위적인
+azure,하늘색의
+below par,수준 이하로
+bizarre,별난;기묘한
+bloom,번영하다;꽃이피다
+bring down the house,박수갈채를 받다
+come into the spotlight,세상 주목을 받다
+considerable,상당한;많은;중요한
+considerate,친절한;사려깊은
+criterion,기준;표준
+curator,박물관 전시 관리인
+dab,한번 칠하기;소량
+dazzle,현혹시키다;압도하다
+dazzlingly,눈부시게
+deem,~으로 여기다
+dress rehearsal,최종 연습;무대 연습
+eccentric,별난;이상한
+embody,구체화하다
+enchanting,매혹적인;황홀한
+evocative,"(감정, 기억을) 불러일으키는"
+evoke,"(감정, 기억을) 불러일으키다"
+flair,천부적인 재능
+highs and lows,고저;기복
+ahead of time,예정보다 빨리;미리
+all-inclusive,모두 포함한;포괄적인
+aside from,~이외에
+awe-inspiring,경외심을 품게 하는;장엄한
+barring,~을 제외하고는
+be apprised of,~을 알다;~을 통지받다
+be carried away,넋을 잃다;흥분하다
+be keen to V,~하고 싶어하다
+beckon,부르다;유혹하다
+brash,성급한;경솔한
+breathtaking,놀랄만한;아슬아슬한
+bustle,야단법석;혼잡
+call for,~을 요구하다
+credulous,잘 믿는;속기쉬운
+drowsy,졸리는;나른한
+expedition,원정;탐험
+get a glimpse of,~을 흘끗보다
+get a raw deal,푸대접받다
+haven,피난처;안식처
+hit the road,출발하다;떠나다
+hot spring,온천
+humble,초라한;겸손한
+jump on the bandwagon,인기있는 쪽에 가담하다
+keepsake,기념품;유품
+kick up one's heels,들떠서 떠들다;뛰어다니다
+laid-back,한가롭고 평온한;느긋한
+loiter,어슬렁거리다
+lousy,형편없는;불결한
+magnificent,장대한;웅장한
+memorable,기억할만한
+memorial,기념비;기념물
+mesmerize,매혹하다;최면을 걸다
+monotonous,단조로운;지루한
+more than meets the eye,겉으로 보기와는 다른 것
+no harm done.,괜찮아요
+oddball,괴짜의;괴짜
+off-limits,출입금지의
+pass the buck,책임을 전가하다
+picturesque,그림같이 아름다운
+pinnacle,산봉우리;절정;정점
+pour the cold water on,~에 찬물을 끼얹다
+remnant,잔여;나머지
+requisite,필수품;필요한
+retreat,휴양지;후퇴하다
+road trip,자동차여행
+serene,잔잔한;조용한
+solitary,고독한;외로운
+solitude,고독
+stressed-out,스트레스로 지친
+stump,난처하게 하다;나무 그루터기
+trail,자국;오솔길;산길
+traverse,가로지르다;횡단하다
+unwind,긴장을 풀다
+vacation spot,휴양지
+whine,투덜대다;불평하다
+around the clock,24시간 내내
+boundless,무한한;끝없는
+brainchild,독창적인 생각
+break new ground,새 분야를 개척하다
+computer-literate,컴퓨터 사용 능력이 있는
+drawback,결점;장애
+flawed,결함이 있는
+flawless,완벽한;완전한
+forefront,최전선;선봉
+foresight,선견지명
+gadget,기계장치;기기;도구
+geometrical,기하학적인
+give a green light,허가하다
+give rise to,~을 일으키다
+groundbreaking,혁신적인
+hydroelectric dam,수력발전 댐
+imprecise,부정확한
+incalculable,헤아릴 수 없는;무수한
+ingenious,독창적인 생각
+ingenuity,독창성
+pivot,회전하다
+pivotal,중추적인
+preclude,방해하다;막다
+problematic,문제가 있는
+push the envelope,한계에 도전하다;새로운 가능성을 열다
+round-the-clock,24시간 연속의
+sizable,상당한 크기의;꽤 큰
+state-of-the-art,최신의
+streamline,유선형으로 만들다;(일을) 능률적으로 하다
+stunning,근사한;훌륭한
+supplier,납품업체
+supreme,최고의;최상의
+systematic,체계적인
+technician,기술자
+tilt,기울다;경사지게 하다
+unmatched,뛰어난;비할 데 없는
+up and running,작동하는
+utilitarian,실용적인;실리적인
+virtually,사실상;실질적으로
+adjoining,서로 접한;인접한
+air out,환기시키다
+allowance,용돈;허가
+attic,다락방
+bleach,표백제
+bug,괴롭히다;방해하다
+cellar,지하 저장실
+clutter,어지르다;어질러진 물건
+corridor,복도
+cost of living,생활비
+cozy,안락한;편안한
+day-care center,탁아소
+detergent,세제
+diaper,기저귀
+dingy,우중충한
+disinfect,소독하다
+dispensable,없어도 되는
+dispense with,~없이 지내다
+dwell,거주하다;살다
+dwelling ,주거;주택
+eye of a needle,바늘귀
+faucet,수도꼭지
+household chores,가사일
+housekeeping,살림살이
+indispensable,없어서는 안되는
+keep it down,조용히 하다
+lease,임대차 계약
+mark my words.,내 말을 명심해
+mop,자루 걸레로 닦다
+nag,잔소리하다
+nail clippers,손톱깎기
+ornate,화려하게 장식한
+plumber,배관공
+refurbish,개조하다;새단장하다
+refurbishment,수리;새단장
+rub,문지르다;문질러 바르다
+spacious,넓은
+stink,악취를 풍기다;불쾌하다
+suburb,교외;근교
+superintendent,(아파트) 관리인;감독자
+tear down,~을 부수다;~을 파괴하다
+trespass,침입하다;침해하다;불법 침해
+trim,깎아 다듬다;잘라내다;손질
+unclog,막힌 것을 뚫다
+unsightly,보기 흉한
+ventilation,환기;통풍;환기장치
+wall outlet,(전기) 콘센트
+weave,"(실, 천을) 짜다;구성하다"
+amnesia,기억상실증;건망증
+anguish,고뇌;고통
+antianxiety drug,항불안제
+apathetic,냉담한;무관심한
+apathy,냉담;무관심
+appall,소름끼치게 하다
+astounding,몹시 놀라운
+bashful,부끄러워 하는
+be astonished at,~에 놀라다
+be inclined to V,~하고 싶어하다;~하는 경향이 있다
+be tickled pink,매우 기뻐하다
+be torn between,~사이에서 망설이다
+cognition,인지;인식
+compassion,연민;동정
+compassionate,동정적인
+consciousness,의식;자각
+delude,속이다;기만하다
+delusion,망상;착각
+distress,괴롭히다;슬프게하다
+distressing,괴롭히는;고통을 주는
+downhearted,낙담한;기가 죽은
+fixate,고정시키다
+fixation,고정;(심리적) 고착
+fly off the handle,자제심을 잃다
+have no qualms,거리낌이 없다;양심의 가책이 없다
+heartburn,가슴앓이
+hesitant,주저하는
+impulsive,충동적인
+inclination,경향;성향;기호
+indignation,분개;분노
+infuriate,격분시키다
+intuition,직관;직감
+mood swing,기분의 급격한 변화
+mood-altering,감정 상태를 바꿀 수 있는
+mortify,굴욕을 느끼게 하다;억제하다
+obstinate,고집 센;완고한
+out of sorts,기분이 언짢은;풀 죽은
+painstakingly,힘들여;공들여
+paranoid,편집증의
+perplex,당황하게 하다;난처하게 하다
+psychiatric,정신과의
+psychiatrist,정신과의사
+psychosis,정신병
+rage,격노하다;격노;분노
+reluctance,꺼림;마지못함
+reluctant,꺼리는;마지못한
+repress,참다;억제하다
+repression,억압;억제
+shy away from,~을 피하다
+snap out of,(어떤 기분에서) 재빨리 벗어나다;기운을 차리다
+spontaneous,자발적인;충동적인
+sullen,시무룩한;음산한
+timid,겁 많은;소심한
+torment,~에게 심한 고통을 주다;고통;고뇌
+wholeheartedly,진심으로
+absent-minded,넋놓은;멍한
+academia,학계
+academic advisor,지도교수
+academic credentials,학위증명서
+algebra,(수학) 대수
+aptitude,적성;소질
+beats me,나는 전혀 모르겠어
+bully,못살게 굴다;약자를 괴롭히는 사람
+burn the midnight oil,밤늦게까지 공부하다
+come to the fore,표면화되다
+corporal punishment,체벌
+cram,벼락 공부를 하다;밀어 넣다
+cross-reference,(같은 책 내의) 전후 참조
+cultivate,계발하다;기르다
+dean,학장;학부장
+diploma,졸업장;학위 증서
+discerning,통찰력 있는;분별 있는
+divert,(관심을) 딴 데로 돌리다
+double major,복수 전공
+drop out,낙제하다;중퇴하다
+dropout,중퇴자
+excel,능가하다;뛰어나다
+exemplary,모범적인;훌륭한
+exertion,노력
+field trip,현장학습;견학
+get the hang of,~의 요령을 이해하다
+graduate with honors,우등으로 졸업하다
+half-hearted,열성이 없는
+hammer home,단단히 주입시키다
+in an orderly fashion,질서정연하게
+jog one's memory,기억이 되살아나게 하다
+learn ~ by heart,~을 암기하다
+liberal arts,인문학;교양과목
+live up to one's expectations,~의 기대에 부응하다
+modest,겸손한;알맞은;적당한
+principal,교장;주요한
+proficient,숙달한;숙련된;능숙한
+recess,쉬는시간;휴식시간
+reckon,계산하다;간주하다
+self-taught,독학의
+student body,전교생
+tedious,지루한;따분한
+think outside the box,고정관념에서 벗어나 창의적으로 생각하다
+to some extent,어느 정도까지는;다소
+transcript,성적 증명서
+tricky,까다로운;다루기 힘든
+tuition fees,수업료;등록금
+unruly,고분고분하지 않은;다루기 힘든
+upbringing,가정교육;양육
+well-rounded,균형잡힌;다방면의
+a host of,수많은
+algae,해조류
+amphibian,양서류
+anatomy,해부학;해부
+animal cruelty,동물학대
+biodiversity,생물학적 다양성
+coral reef,산호초
+cub,"(여우, 곰, 사자의) 새끼"
+feed on,~을 먹고살다
+fend off,~을 물리치다
+flee,달아나다;벗어나다
+flea,벼룩
+germ,세균
+graze,풀을 뜯어먹다
+herd,가축의 떼;(가축을) 모으다
+incisor,앞니
+lurk,숨다;잠복하다
+lush,무성한
+metabolism,신진대사
+microbe,미생물;세균
+microbiology,미생물학;세균학
+microorganism,미생물
+mimic,흉내내다;모방하다
+odor,냄새;악취
+offspring,새끼
+physiology,생리학
+pollen,꽃가루
+purebred,순종;순종의
+reproduce,번식하다;재생하다
+reproduction,번식;생식;재생
+roam,돌아다니다;방랑하다
+salivate,타액을 분비하다;군침을 흘리다
+secretion,분비;분비물
+skeletal,골격의
+specimen,표본
+swine,(가축) 돼지
+taxonomy,분류;분류학
+teem with,~이 풍부하다
+termite,흰개미
+territorial,텃세의;영토의
+vegetation,식물;초목
+weed,잡초
+a handful of,소수의
+apart from,~이외에
+augment,증가시키다
+beat a dead horse,헛수고하다
+bide one's time,기회를 기다리다
+blemish,흠;결점;손상하다
+bottom line,순이익;결론
+clientele,고객
+corporate,기업의;법인의
+downsize,줄이다
+entrepreneur,기업가
+expertise,전문지식;전문기술
+follow suit,남이 하는대로 하다;선례를 따르다
+front-runner,선두주자
+go out of business,폐업하다
+hurdle,장애;곤란한 문제
+incorporate,포함하다;통합하다
+industrious,열심히 일하는;부지런한
+inside and out,안팎으로;완전히
+laborious,힘드는;고된
+lucrative,돈벌이가 되는;수지가 맞는
+make the best of,~을 최대한 이용하다;~을 어떻게든 극복하다
+make up for,~을 보상하다;~을 만회하다
+meet a standard,기준에 부합하다
+net income,순이익;결론
+offset,상쇄하다;보충하다
+outsource,외부자원을 활용하다
+privatization,민영화
+public relations,홍보활동
+quote,견적;시세;인용하다
+sales representative,영업사원
+scheme,계획;책략
+self-employed,자영업의
+self-made man,자수성가한 사람
+shipment,선적;발송
+surpass,능가하다;뛰어나다
+takeover,인수
+tariff,관세
+track record,실적;성적
+trade restriction,무역제한
+twofold,두 배의;이중의
+undertake,맡다;착수하다
+undoubtedly,확실히;틀림없이
+a trace of,약간의
+abound in,~이 많다;~이 풍부하다
+an array of,일련의
+ascend,상승하다
+ascendancy,우위;우세
+broaden the scope of,~의 범위를 넓히다
+by-product,부산물
+catalyst,촉매;자극제
+contradict,반박하다;모순되다
+differing views,이견;다른 견해
+distilled water,증류수
+erroneous,잘못된;틀린
+fraction,파편;소량 일부
+give off,~을 방출하다
+immerse,담그다;적시다;몰두시키다
+impure,불순한;더러운
+inquisition,조사;심문
+inquisitive,호기심 많은;탐구적인
+kindle,불 붙이다;태우다
+make up for,~을 구성하다
+nuts and bolts,요점
+overshadow,가리다;무색하게 하다
+quantitative,양의;양적인
+residue,나머지;잔여
+spark,자극하다;불을 붙이다
+stumble upon,우연히 발견하다
+substance,물질;내용
+substantial,상당한;실질적인
+substantiate,입증하다;실체화하다
+sulfur,황;유황
+synthetic,합성의;인조의
+vapor,증기;기체
+assurance,보장;확신
+assure,확신시키다;보장하다
+beat around the bush,돌려말하다;요점을 피하다
+blunt,무뚝뚝한;솔직한
+brag,자랑하다;떠벌리다
+break the news,소식을 전하다
+come to one's senses,정신을 차리다
+correspond,소식을 주고받다
+correspondence,통신;연락
+downright,철저한;솔직한
+drag one's feet,늑장부리다
+fuss,소동
+get a hold of,~에게 연락하다
+give my best wishes,제 안부를 전해주세요
+hindrance,방해;장애
+hinder,방해하다;저지하다
+I'll have to put you on hold,끊지말고 기다리세요
+intolerable,참을 수 없는
+intolerant,너그럽지 못한;편협한
+mundane,평범한;일상적인
+nerve-wracking,짜증나는;골치아픈
+obstruct,막다;차단하다
+parcel,소포
+postage,우편요금
+postal service,우편업무
+prevail,널리 퍼지다;우세하다
+prevalent,만연하는;유행하는
+prompt,신속한;자극하다;재촉하다
+protracted,오래끄는;지연된
+province,지역;지방
+provocative,화나게 하는;도발적인
+provoke,화나게 하다;자극하다
+readily,쉽게;선뜻
+recount,자세히 이야기하다
+secret admirer,남몰래 흠모하는 사람
+speak up,큰 소리로 말하다;거리낌 없이 말하다
+spill the beans,자백하다
+talkative,수다스러운
+telephone directory,전화번호부
+the latter,후자
+the other day,일전에;며칠전에
+unprecedented,전례없는
+without a hitch,거침없이;무사히
+a myriad of,무수한
+ambivalent,서로 상반된
+breadth,넓이;폭
+celestial body,천체
+comprise,~으로 구성되다;~으로 이루어지다
+conjecture,짐작;추측
+contend,주장하다;경쟁하다
+contention,주장;경쟁
+dormant volcano,휴화산
+elusive,파아하기 어려운;포착하기 어려운
+equator,적도
+extinct volcano,사화산
+fieldwork,현지조사
+landmass,대륙
+latitude,위도
+lava,용암
+longitude,경도
+meteor,유성
+meteorite,운석
+outer space,우주;외계
+ponder,숙고하다
+radiant,빛나는
+radiate,빛나다
+rover,탐사로봇
+scant,부족한
+spatial,공간의
+strait,해협
+surmise,추측하다
+topsoil,표토
+aboriginal tribe,원주민
+absurd,어처구니 없는;불합리한
+alienate,소외시키다
+alienation,소외;소외감
+all walks of life,모든 계층의 사람들
+attire,복장;차려 입히다
+birth control,산아 제한
+cannibal,식인종
+cemetery,공동묘지
+census,인구조사
+census bureau,인구조사국
+civil rights,민권
+code of conduct,행동수칙
+common ground,공통기반;일치점
+contempt,경멸;멸시
+contravene,반대하다;모순되다
+contravention,반대;반론
+demographics,인구통계
+dignity,위엄;품위
+dissuade,단념시키다
+follow in one's footsteps,~의 선례를 따르다
+frown,눈살을 찌푸리다
+look down on,~을 깔보다
+manhood,성년
+mind-set,마음가짐;사고방식
+naturalize,~에게 시민권을 주다
+nomadic,유목의
+norm,규범;표준
+perseverance,인내
+persevere,참다;인내하다
+populous,인구가 많은
+prejudice,편견
+puberty,사춘기;성숙기
+racism,인종차별주의
+senior citizen,노인
+sexism,성차별주의
+social ills,사회악
+social security system,사회보장제도
+social standing,사회적 지위;신분
+stereotype,고정관념
+toddler,유아
+uncivilized,미개의;야만적인
+upheaval,격변;대변동
+upscale,부유층의;평균 이상의
+vulgar,상스러운;저속한
+welfare system,복지제도
+westernize,서구화하다
+when it comes to,~에 대해서라면
+a great deal of,많은
+activism,행동주의
+aftermath,결과;여파
+antarctic,남극;남극의
+arctic,북극;북극의
+bleak,황량한;적만한
+cap,상한을 정하다;상한선
+cast away,~을 버리다;~을 제거하다
+counteract,대항하다;거스르다
+decomposed,부패된;분해된
+deforestation,삼림 벌채
+degradation,침식;붕괴;하락
+degrade,저하시키다;분해되다
+disproportionate,불균형한
+downside,부정적인 면;불리한 면
+ever-increasing,계속 증가하는
+ever-present,항상 존재하는
+glacier,빙하
+impair,손상시키다
+impairment,손상
+intimidation,위협;협박
+landfill site,쓰레기 매립지
+logging,벌목
+marsh,늪;습지
+on the verge of,~의 직전에;금방 ~하려고 하여
+organic agriculture,유기농
+outweigh,~보다 크다;능가하다
+pesticide,살충제;농약
+poaching,밀렵
+pose a threat,위협하다
+reservoir,저수지;저장
+resourceful,기량이 풍부한
+smokestack,공장의 굴뚝
+swamp,늪;습지
+take a toll,피해를 주다
+thrive,번성하다;잘 자라다
+uncanny,초자연적인;섬뜩한
+untapped,이용되지 않은
+vigilant,빈틈없는;방심하지 않는
+whaling,고래잡이
+wilderness,황무지;황야

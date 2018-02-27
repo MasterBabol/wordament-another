@@ -1,8 +1,15 @@
 <?php
 
+$t = $_GET['t'];
+if (strcasecmp($t, '800F') == 0)
+    $t = '800F';
+else if (strcasecmp($t, '900') == 0)
+    $t = '900';
+else
+    $t = '';
 $data = array('totalsum'=>0, 'totalgames'=>0, 'best'=>0);
 
-$ifp = fopen("wscore.dat", "r");
+$ifp = fopen("wscore.".$t.".dat", "r");
 if ($ifp)
 {
 	$user_score = $_GET['score'];
@@ -16,7 +23,7 @@ if ($ifp)
 }
 
 $writestr = serialize($data);
-$ofp = fopen("score.dat", "w");
+$ofp = fopen("wscore.".$t.".dat", "w");
 if ($ofp)
 {
 	fputs($ofp, $writestr);
